@@ -6,3 +6,4 @@
 - In each script {crc_chema}, {qt_query_master_id} and SITE_NAME need replaced
 - Date format is MM/DD/YYYY
 - Currently data needs exported in comma separated values
+- Code uses concept_dimension to determine domain concept codes. Using concept code prefixes is also possible by uncommenting the where clause in the final select. This may perform better.
