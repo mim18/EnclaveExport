@@ -18,7 +18,7 @@ SELECT
         ,a.start_date as "END_DATE"
         --,b.name_char as "NAME_CHAR" removed creates huge export files
         ,A.concept_cd as "CONCEPT_CD"
-        ,a.units_cd as "UNITS_CD"
+        --,a.units_cd as "UNITS_CD"
         --,a.NVAL_NUM as "DOSE_QUANTITY"     -- not harmonized across i2b2s
         ,a.instance_num as "INSTANCE_NUM"   
         ,a.modifier_cd as "MODIFIER_CD"
