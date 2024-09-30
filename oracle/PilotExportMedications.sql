@@ -27,6 +27,7 @@ SELECT
         --,case v.inout_cd  when 'O' then 'Outpatient' when 'I' then 'Inpatient' when 'E' then 'Emergency' else 'Unknown' end as "ENCOUNTER_TYPE"
         ,a.provider_id as "PROVIDER"
         ,to_char(a.encounter_num) as "ENCOUNTER_NUM"
+        ,'SITE NAME' as "SITE"
     FROM {crc_schema}.observation_fact  a 
     JOIN CTE_COHORT_PATIENT_SET c on a.patient_num = c.patient_num )
 SELECT * FROM CTE_PT_FACTS F
