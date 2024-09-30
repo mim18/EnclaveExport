@@ -8,7 +8,7 @@ SELECT distinct patient_num
   where  q.query_master_id = {query_master_id}
 ),
 CTE_CODES AS (
-    SELECT DISTINCT CONCEPT_CD, NAME_CHAR FROM ncatsprod_crcdata.concept_dimension 
+    SELECT DISTINCT CONCEPT_CD, NAME_CHAR FROM  {crc_schema}.concept_dimension 
     WHERE concept_path like '\ACT\Medications\MedicationsByAlpha\%'
 ),
 CTE_PT_FACTS AS (
