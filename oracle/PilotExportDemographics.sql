@@ -18,7 +18,8 @@ SELECT
       ,a.ZIP_CD as "ZIP_CODE"
       ,a.STATECITYZIP_PATH as "STATE_CITY_ZIP"
       ,a.INCOME_CD as "INCOME"
-      ,a.VITAL_STATUS_CD as "VITAL_STATUS"
+      ,a.VITAL_STATUS_CD as "VITAL_STATUS",
+      'SITE NAME' as "SITE"
   FROM {crc_schema}.patient_dimension a, 
   CTE_COHORT_PATIENT_SET c 
   where a.patient_num = c.patient_num;
