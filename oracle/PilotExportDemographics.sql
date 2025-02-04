@@ -1,5 +1,6 @@
 --DEMOGRAPHICS_CSV
 WITH CTE_COHORT_PATIENT_SET AS (
+SELECT patient_num
 FROM {crc_schema}.qt_query_instance q
   join {crc_schema}.qt_query_result_instance r on r.query_instance_id = q.query_instance_id 
   join {crc_schema}.qt_patient_set_collection ps on ps.result_instance_id = r.result_instance_id and result_type_id = 1
